@@ -15,25 +15,6 @@
 
 
         <Button
-            android:id="@+id/add_todo_cam_btn"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="64dp"
-            android:layout_marginTop="98dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/blue"
-            app:icon="@android:drawable/ic_menu_camera"
-            app:iconTint="@color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.642"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/add_todo_imageview"
-            app:layout_constraintVertical_bias="0.0"
-            app:rippleColor="@color/light_blue" />
-
-        <Button
             android:id="@+id/add_todo_save_btn"
             android:layout_width="88dp"
             android:layout_height="64dp"
@@ -46,6 +27,40 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/add_todo_imageview"
             app:layout_constraintVertical_bias="0.75"
+            app:rippleColor="@color/purple_500" />
+
+        <Button
+            android:id="@+id/add_todo_cam_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue"
+            app:icon="@android:drawable/ic_menu_camera"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.223"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_todo_imageview"
+            app:layout_constraintVertical_bias="0.75"
+            app:rippleColor="@color/light_blue" />
+
+        <Button
+            android:id="@+id/add_todo_reset_btn"
+            android:layout_width="88dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginEnd="112dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue"
+            android:text="Reset"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_todo_imageview"
+            app:layout_constraintVertical_bias="1.0"
             app:rippleColor="@color/purple_500" />
 
         <EditText
