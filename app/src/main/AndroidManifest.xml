@@ -9,17 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApp">
+        <activity android:name=".ShowTodo"></activity>
         <activity android:name=".Done" />
         <activity android:name=".In_Progress" />
         <activity android:name=".AddTodo" />
-        <activity android:name=".TodosMain" >
+        <activity android:name=".TodosMain">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
