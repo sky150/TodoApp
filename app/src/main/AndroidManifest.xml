@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TodoApp">
+        <activity android:name=".Done"></activity>
+        <activity android:name=".In_Progress" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
