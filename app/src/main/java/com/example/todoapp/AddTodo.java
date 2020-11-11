@@ -17,6 +17,7 @@ public class AddTodo extends AppCompatActivity {
 
     private Button buttonSave = null;
     private Button buttonPhoto = null;
+    private Button buttonReset = null;
 
     private TextView titleText = null;
     private TextView textText = null;
@@ -28,11 +29,19 @@ public class AddTodo extends AppCompatActivity {
 
         SugarContext.init(this);
 
-        buttonSave = (Button) findViewById(R.id.add_todo_save_btn);
+        buttonSave = (Button) findViewById(R.id.add_todo_reset_btn);
         buttonSave.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 System.out.println("doButtonSaveClick");
                 doButtonSaveClick();
+            }
+        });
+
+        buttonReset = (Button) findViewById(R.id.add_todo_reset_btn);
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("doButtonResetClick");
+                doButtonResetClick();
             }
         });
 
@@ -45,6 +54,11 @@ public class AddTodo extends AppCompatActivity {
         todo.save();
         List<Todo> todos = Todo.listAll(Todo.class);
         System.out.println("COUNT: " + todos.size());
+        for(int i = 0; i < todos.size(); i++){
+            System.out.println(todos.get(i).getTitle());
+            System.out.println(todos.get(i).getText());
+            System.out.println(todos.get(i).getDone());
+        }
 
     }
 
