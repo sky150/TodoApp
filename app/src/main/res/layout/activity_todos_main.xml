@@ -16,9 +16,10 @@
         android:foreground="@android:drawable/ic_input_add"
         android:foregroundTint="@color/white"
         android:onClick="addButtonClicked"
+        app:backgroundTint="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="#3F51B5" />
+        app:rippleColor="@color/blue" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -26,10 +27,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:menu="@menu/menu_main"
+        app:backgroundTint="@color/blue"
         app:itemIconTint="@android:color/black"
         app:itemTextColor="@android:color/white"
-        app:backgroundTint="@color/purple_500"
+        app:menu="@menu/menu_main"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
