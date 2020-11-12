@@ -78,7 +78,14 @@ public class AddTodo extends AppCompatActivity {
             System.out.println(todos.get(i).getText());
             System.out.println(todos.get(i).getDone());
         }
+        buttonListClicked();
+    }
 
+    private void buttonListClicked() {
+        Intent intent = new Intent(this, TodosMain.class);
+        String message = "Come from Add!";
+        intent.putExtra("message", message);
+        startActivity(intent);
     }
 
     private void doButtonResetClick() {
@@ -115,6 +122,16 @@ public class AddTodo extends AppCompatActivity {
 
     public void addCalendarButtonClicked(View view) {
         Intent intent = new Intent(this, AddDate.class);
+        startActivity(intent);
+    }
+
+    public void addSaveButtonClicked(){
+        Intent intent = new Intent(this, TodosMain.class);
+        startActivity(intent);
+    }
+
+    public void addSaveButtonClicked(View view) {
+        Intent intent = new Intent(this, TodosMain.class);
         startActivity(intent);
     }
 }

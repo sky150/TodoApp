@@ -2,21 +2,40 @@ package com.example.todoapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import com.example.todoapp.model.Todo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class TodosMain extends AppCompatActivity {
 
+    ListView listView;
+    TextView textView;
+    String[] listItem;
+
+    private ListView todoListView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todos_main);
+
+        listView=(ListView)findViewById(R.id.todoList);
+        textView=(TextView)findViewById(R.id.textView);
+        listItem = getResources().getStringArray(R.array.array_technology);
+        final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, listItem);
+        listView.setAdapter(adapter);
+
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -51,6 +70,16 @@ public class TodosMain extends AppCompatActivity {
 
     public void addButtonClicked(View view) {
         Intent intent = new Intent(this, AddTodo.class);
+        startActivity(intent);
+    }
+
+    public void addListClicked(){
+        Intent intent = new Intent(this, ShowTodo.class);
+        startActivity(intent);
+    }
+
+    public void addListClicked(View view) {
+        Intent intent = new Intent(this, ShowTodo.class);
         startActivity(intent);
     }
 }
