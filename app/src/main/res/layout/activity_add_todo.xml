@@ -15,6 +15,23 @@
 
 
         <Button
+            android:id="@+id/add_todo_cam_btn2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="98dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/blue"
+            android:onClick="addCalendarButtonClicked"
+            app:icon="@android:drawable/ic_menu_my_calendar"
+            app:iconTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_todo_imageview"
+            app:layout_constraintVertical_bias="0.75"
+            app:rippleColor="@color/light_blue" />
+
+        <Button
             android:id="@+id/add_todo_save_btn"
             android:layout_width="88dp"
             android:layout_height="64dp"

@@ -107,4 +107,14 @@ public class AddTodo extends AppCompatActivity {
             }
         }
     }
+
+    public void addCalendarButtonClicked(){
+        Intent intent = new Intent(this, AddDate.class);
+        startActivity(intent);
+    }
+
+    public void addCalendarButtonClicked(View view) {
+        Intent intent = new Intent(this, AddDate.class);
+        startActivity(intent);
+    }
 }
