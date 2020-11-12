@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".TodosMain">
 
+
+    <ListView
+        android:id="@+id/todoList"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add"
         android:layout_width="69dp"
